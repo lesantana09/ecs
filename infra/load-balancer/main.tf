@@ -56,8 +56,8 @@ resource "aws_lb_target_group" "apps" {
     port                = var.apps[count.index].container_port
     healthy_threshold   = 2
     unhealthy_threshold = 10
-    timeout             = 60
-    interval            = 300
+    timeout             = 5
+    interval            = 30
     matcher             = "200"
   }
 }

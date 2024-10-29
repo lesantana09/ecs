@@ -34,27 +34,25 @@ variable "apps" {
   }))
   default = [
     {
-      name            = "app1"
-      container_image = "python/fastapi_v1:latest"
-      container_port  = 80
-      cpu             = "256"
-      memory          = "512"
-      desired_count   = 2
-      path_pattern    = "/app1*"
-      environment_variables = {
-      }
+      name                  = "app1"
+      container_image       = "324037318280.dkr.ecr.us-east-1.amazonaws.com/python/app1:latest"
+      container_port        = 8000
+      cpu                   = "256"
+      memory                = "512"
+      desired_count         = 1
+      path_pattern          = "/app1*"
+      environment_variables = {}
     },
     {
-      name            = "app2"
-      container_image = "python/fastapi_v2:latest"
-      container_port  = 80
-      cpu             = "256"
-      memory          = "512"
-      desired_count   = 2
-      path_pattern    = "/app2*"
-      environment_variables = {
-      }
-    }
+      name                  = "app4"
+      container_image       = "324037318280.dkr.ecr.us-east-1.amazonaws.com/nextjs/app4:latest"
+      container_port        = 80
+      cpu                   = "256"
+      memory                = "512"
+      desired_count         = 1
+      path_pattern          = "/app4*"
+      environment_variables = {}
+    },
   ]
 }
 
